@@ -1,0 +1,58 @@
+
+:root{
+  --bg:#0e1217; --panel:#151a21; --muted:#a6b3c2; --text:#e6eef8;
+  --accent:#22c55e; --danger:#ef4444; --info:#60a5fa; --gold:#facc15;
+  --chip:#1f2732; --chip-border:#2b3442; --shadow:0 10px 24px rgba(0,0,0,.35);
+  --radius:16px;
+}
+*{box-sizing:border-box} html,body{height:100%}
+body{margin:0; font-family:Inter, system-ui; color:var(--text);
+  background:linear-gradient(180deg,#0d1117 0%, #0b0f14 100%); display:flex}
+/* Auth */
+.auth{display:flex; align-items:center; justify-content:center; width:100%}
+.login-card{width:380px; background:linear-gradient(180deg,#0f1420,#0c1017);
+  border:1px solid #1b2230; border-radius:16px; padding:22px; box-shadow:var(--shadow)}
+.brand{font-weight:800; letter-spacing:.2px; font-size:22px; padding:14px 12px;
+  background:linear-gradient(90deg,#0f1720,#0b0f14); border:1px solid #1b2230;
+  border-radius:12px; box-shadow:var(--shadow); text-align:center; margin-bottom:12px}
+.h1{font-size:28px; font-weight:800; margin:0 0 18px}
+.h2{font-size:20px; font-weight:800; margin:0 0 12px; color:#cbd8e6}
+.p{color:var(--muted); margin:0 0 10px}
+.small{font-size:12px}
+.input{background:#0c1422; border:1px solid #1f2a3c; color:#dfe9ff; padding:10px 12px; border-radius:10px; width:100%}
+.label{font-size:12px; color:#9fb3c7; margin:12px 0 6px}
+.btn{appearance:none; border:1px solid #283347; color:#eaf2ff; background:#0f1728;
+  border-radius:12px; padding:10px 14px; cursor:pointer; font-weight:700; letter-spacing:.3px; transition:all .2s ease}
+.btn:hover{transform:translateY(-1px); border-color:#3a4a66; background:#122038}
+.btn:disabled{opacity:.55; cursor:wait}
+/* Sidebar */
+.sidebar{width:260px; background:linear-gradient(180deg,#0c1116,#0b0f14);
+  border-right:1px solid #1b2230; padding:20px 16px; position:sticky; top:0; height:100vh;
+  display:flex; flex-direction:column; gap:16px}
+nav{display:flex; flex-direction:column; gap:8px; overflow:auto; padding-right:4px}
+.nav-item{appearance:none; border:1px solid #1b2230; border-radius:12px; background:#0f1520; color:var(--text);
+  padding:12px 14px; text-align:left; cursor:pointer; font-weight:600; transition:all .18s ease}
+.nav-item:hover{transform:translateY(-1px); border-color:#253044; background:#121a28}
+.nav-item.active{outline:2px solid #2e3a52; background:#121a28}
+.nav-item.gold{border-color:#3a300e; background:#121006; color:#ffe9a6}
+.nav-item.gold:hover{border-color:#7a5d00; background:#1a1406; color:#fff0b8}
+.footnote{margin-top:auto; font-size:12px; color:#8ca0b3; opacity:.7; text-align:center}
+/* Main */
+#app{flex:1; padding:28px 28px 40px; overflow:auto}
+.card{background:linear-gradient(180deg,#0f1420,#0c1017); border:1px solid #1b2230; border-radius:16px; padding:18px; margin:0 0 16px; box-shadow:var(--shadow)}
+.row{display:grid; grid-template-columns:1fr 1fr; gap:16px} @media(max-width:1100px){.row{grid-template-columns:1fr}}
+.table{width:100%; border-collapse:separate; border-spacing:0 10px}
+.table th,.table td{padding:12px 14px; text-align:left}
+.table thead th{color:#b7c7da; font-weight:800; font-size:12px; text-transform:uppercase; letter-spacing:.7px}
+.tr{background:#0e1522; border:1px solid #1a2230; border-radius:12px; box-shadow: inset 0 0 0 1px rgba(255,255,255,.02)}
+.tr td{border-top:1px solid #1a2230; border-bottom:1px solid #1a2230}
+.tr td:first-child{border-left:1px solid #1a2230; border-top-left-radius:12px; border-bottom-left-radius:12px}
+.tr td:last-child {border-right:1px solid #1a2230; border-top-right-radius:12px; border-bottom-right-radius:12px}
+.chip{display:inline-flex; align-items:center; gap:8px; padding:6px 10px; border-radius:999px; border:1px solid #2b3442; background:#1f2732; font-size:12px}
+.badge{padding:6px 10px; border-radius:999px; font-weight:800}
+.badge.buy{background:rgba(34,197,94,.1); color:#9affc0; border:1px solid rgba(34,197,94,.25)}
+.badge.sell{background:rgba(239,68,68,.1); color:#ffb1b1; border:1px solid rgba(239,68,68,.25)}
+.badge.neutral{background:rgba(96,165,250,.1); color:#b8d5ff; border:1px solid rgba(96,165,250,.25)}
+.badge.gold{background:rgba(250,204,21,.1); color:#ffe9a6; border:1px solid rgba(250,204,21,.35)}
+.grid-3{display:grid; grid-template-columns:repeat(3,1fr); gap:14px}
+.toast{position:fixed; right:22px; bottom:22px; padding:12px 16px; background:#101827; border:1px solid #263248; border-radius:12px; color:#dfe9ff; box-shadow:var(--shadow)}

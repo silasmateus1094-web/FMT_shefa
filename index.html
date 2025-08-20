@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FMT Sinais — PRD v2.5 (User Control)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div id="auth" class="auth">
+    <div class="login-card">
+      <div class="brand">FMT Sinais</div>
+      <div class="h2">Acesso restrito</div>
+      <div class="label">E-mail</div>
+      <input id="loginEmail" class="input" placeholder="admin@fmt" value="admin@fmt"/>
+      <div class="label">Senha</div>
+      <input id="loginPass" type="password" class="input" placeholder="********"/>
+      <button id="btnLogin" class="btn" style="width:100%; margin-top:12px">Entrar</button>
+      <div id="loginMsg" class="p" style="margin-top:10px; color:#ffb1b1"></div>
+      <div class="p small" style="margin-top:14px; opacity:.7">Dica: primeiro acesso com o usuário <b>admin@fmt</b>.<br/>A senha inicial está no arquivo <code>README.txt</code>.</div>
+    </div>
+  </div>
+
+  <aside class="sidebar" style="display:none">
+    <div class="brand">FMT Sinais</div>
+    <nav id="menu"></nav>
+    <div class="footnote"><span id="who"></span><br/>PRD v2.5</div>
+  </aside>
+
+  <main id="app" style="display:none"></main>
+
+  <script src="./app.js"></script>
+</body>
+</html>
